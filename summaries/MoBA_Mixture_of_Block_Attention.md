@@ -32,7 +32,7 @@ Only the top-k scoring blocks are activated ($g_i = 1$ otherwise $0$); the query
 **Causality.** Two mechanisms preserve autoregressive validity: (1) queries are never routed to future blocks ($s_i = -\infty$ if $\text{pos}(q) < i \times B$), and (2) the block containing the query itself (the "current block") is always selected and masked causally, preventing leakage from future tokens via mean pooling.
 
 <div align="center">
-<img width="50%" alt="architecture_diagram" src="https://github.com/user-attachments/assets/9b299bbf-4786-4039-872c-cbce2451960a" />
+<img width="50%" alt="architecture_diagram" src="../images/MoBA_Architecture_Diagram.png" />
 <p>Fig. Illustration of mixture of block attention (MoBA).</p>
 </div>
 
@@ -42,7 +42,7 @@ shown in the figure, the first query is assigned to the first and second blocks,
 third and fourth blocks.
 
 <div align="center">
-<img width="50%" alt="algorithm" src="https://github.com/user-attachments/assets/776b0be1-ece5-4b9d-b53b-c556619bd990" />
+<img width="50%" alt="algorithm" src="../images/MoBA_Algorithm.png" />
 <p>Algorithm: MoBA (Mixture of Block Attention) Implementation.</p>
 </div>
 
@@ -99,7 +99,7 @@ The authors train five language models (545M–2.1B params) following the Chinch
 **Fitted Scaling Law Curves**
 
 <div>
-<img width="50%" alt="scaling" src="https://github.com/user-attachments/assets/9b4e7c95-a1be-483f-b31e-a5dbcb6ba0a1" />
+<img width="50%" alt="scaling" src="../images/MoBA_Scaling_Law.png" />
 </div>
 
 | Metric | MoBA | Full Attention |
